@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · Mucula</title>
+<meta name="description" content="Que dados a Mucula guarda, para que servem, com quem são partilhados e como apagar a tua conta.">
+<style>
+  /* Página leve de propósito: sem fontes nem scripts externos, para abrir depressa com pouca internet. */
+  :root {
+    --bg: #FAFAF8;
+    --ink: #1C1917;
+    --ink-soft: #57534E;
+    --line: rgba(28, 25, 23, 0.14);
+    --accent: #B45309;
+    --accent-bg: rgba(217, 119, 6, 0.09);
+    --fill-bg: #FEF08A;
+    --fill-ink: #422006;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161412;
+      --ink: #F5F2EE;
+      --ink-soft: #B8B1A9;
+      --line: rgba(245, 242, 238, 0.18);
+      --accent: #F59E0B;
+      --accent-bg: rgba(245, 158, 11, 0.12);
+      --fill-bg: #854D0E;
+      --fill-ink: #FEF9C3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161412; --ink: #F5F2EE; --ink-soft: #B8B1A9; --line: rgba(245, 242, 238, 0.18);
+    --accent: #F59E0B; --accent-bg: rgba(245, 158, 11, 0.12); --fill-bg: #854D0E; --fill-ink: #FEF9C3;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1rem; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+
+  h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+  h2 { font-size: 1.3rem; line-height: 1.25; letter-spacing: -0.01em; margin: 2.75rem 0 0.75rem; }
+  p, ul, dl { margin: 0 0 1rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .meta { color: var(--ink-soft); margin: 0 0 2rem; }
+
+  .resumo {
+    background: var(--accent-bg);
+    border-left: 4px solid var(--accent);
+    padding: 1.1rem 1.25rem 0.4rem;
+    border-radius: 0 8px 8px 0;
+  }
+  .resumo h2 { margin-top: 0; font-size: 1.1rem; }
+
+  dl.dados dt { font-weight: 700; margin-top: 1.1rem; }
+  dl.dados dd { margin: 0.15rem 0 0; color: var(--ink-soft); }
+  dl.dados dd strong { color: var(--ink); font-weight: 600; }
+
+  .nao { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 1.5rem; }
+
+  .apagar {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.25rem 1.25rem 0.5rem;
+    margin-top: 2.75rem;
+  }
+  .apagar h2 { margin-top: 0; }
+  .apagar:target { background: var(--accent-bg); }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    margin: 0.25rem 0 1rem;
+  }
+
+  /* Espaços que tens de preencher antes de publicar. Procura por "COLOCAR" e por estas marcas amarelas. */
+  mark { background: var(--fill-bg); color: var(--fill-ink); padding: 0.05em 0.3em; border-radius: 3px; }
+
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.95rem; }
+
+  @media print {
+    body { background: #fff; color: #000; }
+    .btn { border: 1px solid #000; color: #000; background: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Política de Privacidade da Mucula</h1>
+<p class="meta">Última actualização: 28 de outubro de 2026</p>
+
+<section class="resumo" aria-labelledby="resumo">
+  <h2 id="resumo">Em 30 segundos</h2>
+  <ul>
+    <li>Guardamos o teu número, o teu nome e o que publicas, para a Mucula funcionar.</li>
+    <li>O teu número só aparece a outra pessoa quando um pedido de contacto é aceite.</li>
+    <li>Não vendemos os teus dados e não mostramos publicidade de terceiros.</li>
+    <li>O Minguito usa inteligência artificial: o que lhe dizes é enviado a um serviço externo para ele responder.</li>
+    <li>Podes apagar a tua conta quando quiseres, <a href="#apagar-conta">na app ou por email</a>.</li>
+  </ul>
+</section>
+
+<h2>1. Quem é o responsável</h2>
+<p>
+  A Mucula é gerida por <mark>Antunes Chacuma [confirmar nome completo]</mark>, a título individual, em Luanda, Angola.
+  É esta pessoa que decide como os teus dados são usados. Ainda não existe uma empresa; se isso mudar, esta política será actualizada.
+</p>
+<p>Contacto para tudo o que tenha a ver com privacidade: <a href="mailto:COLOCAR-EMAIL-AQUI@exemplo.ao">COLOCAR-EMAIL-AQUI@exemplo.ao</a></p>
+
+<h2>2. Que dados guardamos</h2>
+<dl class="dados">
+  <dt>Conta</dt>
+  <dd>Número de telefone, nome, nome de utilizador e palavra-passe. A palavra-passe fica guardada de forma cifrada, nós não a conseguimos ler. <strong>Serve para:</strong> criares conta, entrares e confirmares que o número é teu.</dd>
+
+  <dt>Perfil</dt>
+  <dd>Foto e bairro, se os preencheres.</dd>
+
+  <dt>Anúncios</dt>
+  <dd>Título, descrição, preço, categoria, bairro e fotos. <strong>São públicos:</strong> qualquer pessoa na app os pode ver, excepto quem se bloqueou com o vendedor e os anúncios escondidos por denúncias.</dd>
+
+  <dt>Pedidos de contacto</dt>
+  <dd>Quem pediu a quem, para que anúncio, a mensagem curta que escreves e o estado do pedido.</dd>
+
+  <dt>Guardados</dt>
+  <dd>Os anúncios que guardas.</dd>
+
+  <dt>Conversas com o Minguito</dt>
+  <dd>O que escreves ou dizes ao Minguito e as respostas dele. Se usares a voz, a gravação é transformada em texto. <strong>Nós não guardamos o áudio;</strong> guardamos o texto da conversa.</dd>
+
+  <dt>Segurança</dt>
+  <dd>As pessoas que bloqueias, as denúncias que fazes e as denúncias feitas contra ti ou contra os teus anúncios.</dd>
+
+  <dt>Notificações</dt>
+  <dd>Um código do teu telemóvel (chamado token) e o sistema dele (Android ou iPhone), para te enviarmos avisos.</dd>
+
+  <dt>Uso da app</dt>
+  <dd>Registos simples do que fazes (por exemplo, os anúncios que vês), para perceber o que funciona e travar abusos.</dd>
+
+  <dt>Verificação do número</dt>
+  <dd>Um registo técnico dos pedidos de código (número e hora), para evitar abusos. É mantido por pouco tempo.</dd>
+</dl>
+
+<div class="nao">
+  <p><strong>O que não fazemos:</strong></p>
+  <ul>
+    <li>Não usamos a tua localização por GPS. O bairro és tu que o escolhes.</li>
+    <li>Não lemos a lista de contactos do teu telemóvel.</li>
+    <li>Só acedemos às fotos que escolheres para publicar.</li>
+    <li>O microfone só é usado quando gravas uma mensagem de voz para o Minguito.</li>
+  </ul>
+</div>
+
+<h2>3. Para que usamos os teus dados</h2>
+<ul>
+  <li>Criar a tua conta e confirmar o teu número.</li>
+  <li>Mostrar os teus anúncios e ligar compradores a vendedores.</li>
+  <li>Enviar avisos, como quando alguém te pede contacto.</li>
+  <li>Responder-te através do Minguito.</li>
+  <li>Proteger a comunidade: denúncias, bloqueios e prevenção de burlas e spam.</li>
+  <li>Melhorar a app.</li>
+</ul>
+
+<h2>4. Com quem partilhamos</h2>
+<p>
+  <strong>Com outras pessoas na app.</strong> O que publicas é público: nome ou nome de utilizador, foto, bairro e anúncios.
+  O teu número só é partilhado quando aceitas um pedido de contacto (ou quando aceitam o teu).
+  Depois de partilhado, não o conseguimos retirar à outra pessoa.
+</p>
+<p><strong>Com os serviços que usamos para a Mucula funcionar</strong> (cada um recebe só o necessário):</p>
+<ul>
+  <li><strong>Supabase:</strong> guarda a base de dados, as contas e os ficheiros. Servidores: <mark>[confirmar a região no painel do Supabase]</mark>.</li>
+  <li><strong>Twilio:</strong> envia o código de verificação por SMS ou WhatsApp, por isso recebe o teu número.</li>
+  <li><strong>Groq:</strong> faz o Minguito funcionar. Recebe o que escreves ou dizes (o áudio, se usares voz) e algum contexto para responder, como o teu primeiro nome, o teu bairro e a conversa recente. A forma como o Groq trata esses dados segue os termos dele.</li>
+  <li><strong>Expo e Google:</strong> entregam as notificações no teu telemóvel.</li>
+</ul>
+<p>
+  Não vendemos os teus dados. Só os entregamos a uma autoridade se a lei o exigir.
+  Como alguns destes serviços funcionam fora de Angola (por exemplo, na Europa e nos Estados Unidos), os teus dados podem ser tratados fora do país.
+</p>
+
+<h2>5. Quanto tempo guardamos</h2>
+<p>Enquanto tiveres conta. Quando a apagas, removemos o que está ligado a ti (ver <a href="#apagar-conta">Apagar a tua conta</a>). Ficam apenas:</p>
+<ul>
+  <li>o registo técnico dos pedidos de código, por pouco tempo, para evitar abusos;</li>
+  <li>as denúncias que fizeste, sem o teu nome, como registo de segurança;</li>
+  <li>os registos de uso, sem ligação à tua conta;</li>
+  <li>as cópias de segurança do nosso fornecedor, que podem demorar até <mark>[confirmar: nº de dias no plano Supabase]</mark> a desaparecer.</li>
+</ul>
+
+<h2>6. Os teus direitos</h2>
+<p>
+  Tens o direito de saber que dados teus guardamos, de os corrigir, de os apagar, de te opores a certos usos e de retirar o teu consentimento.
+  Podes corrigir o teu perfil directamente na app. Para o resto, escreve-nos para
+  <a href="mailto:COLOCAR-EMAIL-AQUI@exemplo.ao">COLOCAR-EMAIL-AQUI@exemplo.ao</a>.
+  Respondemos em até <mark>30 dias</mark>.
+</p>
+<p>Se achares que os teus dados não foram bem tratados, podes também apresentar queixa à Agência de Protecção de Dados (APD) de Angola.</p>
+
+<section class="apagar" id="apagar-conta" aria-labelledby="apagar-titulo">
+  <h2 id="apagar-titulo">7. Apagar a tua conta</h2>
+
+  <p><strong>Na app (imediato):</strong> abre o teu Perfil, toca em “Terminar conta” e escreve APAGAR para confirmar.</p>
+
+  <p><strong>Sem a app</strong> (por exemplo, se já a desinstalaste): envia um email com o assunto “Apagar conta Mucula” e o número de telefone com que te registaste. Podemos pedir-te que confirmes que o número é teu. Tratamos o pedido em até <mark>30 dias</mark>.</p>
+  <p><a class="btn" href="mailto:COLOCAR-EMAIL-AQUI@exemplo.ao?subject=Apagar%20conta%20Mucula">Pedir a eliminação por email</a></p>
+
+  <p><strong>O que é apagado:</strong> o teu perfil e número, os teus anúncios e as fotos deles, os pedidos de contacto, os guardados, as conversas com o Minguito, os bloqueios e o código de notificações do teu telemóvel. O teu número fica livre para um novo registo.</p>
+  <p>Não dá para desfazer. As pessoas que falaram contigo deixam de ver essa conversa. O que já foi partilhado, como um número de telefone, não podemos retirar a quem já o tem.</p>
+</section>
+
+<h2>8. Idade</h2>
+<p>A Mucula não é destinada a menores de 18 anos. Se soubermos que uma conta pertence a um menor, podemos apagá-la.</p>
+
+<h2>9. Segurança</h2>
+<p>
+  Usamos ligações cifradas e regras de acesso para proteger os dados, e o código de verificação confirma que o número é teu.
+  Mesmo assim, nenhum sistema é totalmente seguro. Se houver um problema grave que afecte os teus dados, faremos o possível para te avisar.
+</p>
+
+<h2>10. Alterações a esta política</h2>
+<p>Se mudarmos algo importante, avisamos na app ou nesta página e actualizamos a data no topo.</p>
+
+<footer>
+  Mucula · Luanda, Angola · <a href="mailto:COLOCAR-EMAIL-AQUI@exemplo.ao">COLOCAR-EMAIL-AQUI@exemplo.ao</a>
+</footer>
+
+</main>
+</body>
+</html>
